@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   become: yes
+  sudo: yes
   
   tasks:
   - name: install JDK 11
@@ -44,7 +45,6 @@
       state: directory
 
   - name: Start and enable Tomcat service
-    port: 9090
     shell: /opt/tomcat/bin/startup.sh
     
 
