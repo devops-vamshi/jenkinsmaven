@@ -1,7 +1,8 @@
 ---
 - hosts: localhost
   become: yes
-  sudo: yes
+  become_method: sudo
+  remote_user: root
   
   tasks:
   - name: install JDK 11
